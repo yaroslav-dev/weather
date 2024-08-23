@@ -27,7 +27,7 @@ export const getWeatherData = (lat, lon) => {
 
 export const getGeoData = (lat, lon) => {
   return new Promise((res, rej) => {
-    axios.get(`http://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=0&appid=${weatherAPIKey}`)
+    axios.get(`https://api.openweathermap.org/geo/1.0/reverse?lat=${lat}&lon=${lon}&limit=0&appid=${weatherAPIKey}`)
       .then((response) => {
         res(response.data)
       })
